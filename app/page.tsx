@@ -199,6 +199,23 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* CTA after My Approach */}
+      <section className="bg-gold-500 py-10">
+        <div className="container-content flex flex-col sm:flex-row items-center justify-between gap-6">
+          <p className="text-white font-serif text-lg text-center sm:text-left">
+            Ready to book a consultation with Dr. Schreiber?
+          </p>
+          <div className="flex gap-3 flex-shrink-0">
+            <Link href="/contact" className="bg-white text-gold-600 font-semibold text-sm uppercase tracking-widest px-6 py-3 hover:bg-navy-50 transition-colors duration-150">
+              Book an Appointment
+            </Link>
+            <a href="tel:02084586775" className="border border-white text-white font-semibold text-sm uppercase tracking-widest px-6 py-3 hover:bg-gold-600 transition-colors duration-150">
+              020 8458 6775
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Reviews highlight */}
       <section className="bg-navy-950 py-16">
         <div className="container-content">
@@ -217,7 +234,10 @@ export default function HomePage() {
             </div>
           </div>
           <ReviewCarousel />
-          <div className="text-center mt-10">
+          <div className="text-center mt-10 flex gap-4 justify-center flex-wrap">
+            <Link href="/contact" className="btn-primary">
+              Book a Consultation
+            </Link>
             <Link href="/reviews" className="btn-outline !border-navy-600 !text-navy-300 hover:!bg-navy-800 hover:!text-white">
               Read all reviews
             </Link>
@@ -247,7 +267,10 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <div className="text-center mt-10">
+          <div className="text-center mt-10 flex gap-4 justify-center flex-wrap">
+            <Link href="/contact" className="btn-primary">
+              Book a Consultation
+            </Link>
             <Link href="/conditions" className="btn-outline">
               View All Conditions
             </Link>

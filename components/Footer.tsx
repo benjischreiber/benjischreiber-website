@@ -95,6 +95,10 @@ export default function Footer() {
               Google Reviews
             </a>
             <span>·</span>
+            <Link href="/privacy" className="hover:text-gold-400 transition-colors duration-150">
+              Privacy Notice
+            </Link>
+            <span>·</span>
             <p>Registered with the General Medical Council</p>
           </div>
         </div>
