@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.benjischreiber.com)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(curl:*)",
+      "Bash(textutil:*)",
+      "Bash(python3:*)",
+      "Bash(brew install:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(lsof:*)",
+      "Bash(kill:*)",
+      "WebFetch(domain:www.youtube.com)",
+      "Bash(vercel --version:*)",
+      "Bash(npm run build:*)"
+    ]
+  }
+}
