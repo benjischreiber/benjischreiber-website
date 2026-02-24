@@ -12,7 +12,12 @@
       "Bash(kill:*)",
       "WebFetch(domain:www.youtube.com)",
       "Bash(vercel --version:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(vercel:*)",
+      "Bash(git remote set-url:*)"
     ]
   }
 }
