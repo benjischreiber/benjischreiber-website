@@ -143,7 +143,7 @@ export default function ContactPage() {
                 <div>
                   <p className="text-xs text-navy-400 uppercase tracking-widest font-medium mb-1">Secretary Hours</p>
                   <p className="text-navy-800 text-sm">Monday – Friday</p>
-                  <p className="text-navy-600 text-sm">9:00 am – 5:00 pm</p>
+                  <p className="text-navy-600 text-sm">8:00 am – 4:00 pm</p>
                 </div>
               </div>
 
