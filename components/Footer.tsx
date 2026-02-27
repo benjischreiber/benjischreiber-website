@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-navy-950 text-navy-300">
       <div className="container-content py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Brand */}
           <div>
             <p className="font-serif text-white text-lg mb-1">Dr. Benji Schreiber</p>
@@ -19,33 +19,6 @@ export default function Footer() {
               Honorary Associate Professor, UCL<br />
               NHS Consultant, Royal Free Hospital
             </p>
-          </div>
-
-          {/* Links */}
-          <div>
-            <p className="text-white text-sm font-semibold uppercase tracking-widest mb-4">
-              Quick Links
-            </p>
-            <ul className="space-y-2 text-sm">
-              {[
-                { href: "/about", label: "About" },
-                { href: "/conditions", label: "Conditions Treated" },
-                { href: "/fees", label: "Fees & Insurance" },
-                { href: "/medicolegal", label: "Medicolegal" },
-                { href: "/consulting-rooms", label: "Locations" },
-                { href: "/reviews", label: "Patient Reviews" },
-                { href: "/contact", label: "Contact & Appointments" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="hover:text-gold-400 transition-colors duration-150"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Contact */}
