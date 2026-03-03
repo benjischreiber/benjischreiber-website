@@ -186,35 +186,6 @@ export default function ReviewsPage() {
         </div>
       </section>
 
-      {/* Leave a review CTA */}
-      <section className="bg-navy-50 py-12">
-        <div className="container-content text-center max-w-2xl">
-          <p className="section-label">Share Your Experience</p>
-          <h2 className="font-serif text-navy-900 text-2xl mb-3">Been a patient of Dr. Schreiber?</h2>
-          <p className="text-navy-500 text-sm mb-7">
-            Your feedback helps others find the right care. We&apos;d be grateful if you left a review
-            on Doctify or Google.
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <a
-              href={DOCTIFY_REVIEW_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
-              Review on Doctify
-            </a>
-            <a
-              href={GOOGLE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-outline"
-            >
-              Review on Google
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="bg-navy-900 text-white py-16">
