@@ -217,34 +217,6 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <div>
-                  <label htmlFor="referral" className="block text-xs font-semibold text-navy-600 uppercase tracking-widest mb-2">
-                    Do you have a GP referral?
-                  </label>
-                  <select
-                    id="referral"
-                    name="referral"
-                    className="w-full border border-navy-200 px-4 py-3 text-sm text-navy-800 focus:outline-none focus:border-gold-400 transition-colors bg-white"
-                  >
-                    <option value="">Please select</option>
-                    <option value="yes">Yes, I have a referral letter</option>
-                    <option value="no">No, self-referral</option>
-                    <option value="pending">Referral requested but not yet received</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="insurance" className="block text-xs font-semibold text-navy-600 uppercase tracking-widest mb-2">
-                    Health Insurance Provider
-                  </label>
-                  <input
-                    type="text"
-                    id="insurance"
-                    name="insurance"
-                    className="w-full border border-navy-200 px-4 py-3 text-sm text-navy-800 focus:outline-none focus:border-gold-400 transition-colors"
-                    placeholder="e.g. Bupa, AXA, self-pay"
-                  />
-                </div>
 
                 <div>
                   <label htmlFor="message" className="block text-xs font-semibold text-navy-600 uppercase tracking-widest mb-2">
