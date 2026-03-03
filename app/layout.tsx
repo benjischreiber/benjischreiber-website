@@ -36,7 +36,7 @@ const schemaMarkup = {
   "telephone": "+442084586775",
   "email": "info@benjischreiber.com",
   "medicalSpecialty": "Rheumatology",
-  "image": "https://www.benjischreiber.com/images/benji.jpg",
+  "image": "https://www.benjischreiber.com/images/benji.png",
   "identifier": {
     "@type": "PropertyValue",
     "name": "GMC",
