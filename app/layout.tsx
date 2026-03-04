@@ -69,7 +69,11 @@ const schemaMarkup = {
     "ratingValue": "5",
     "reviewCount": "110",
     "bestRating": "5"
-  }
+  },
+  "sameAs": [
+    "https://www.doctify.com/uk/specialist/dr-benji-schreiber",
+    "https://www.hcahealthcare.co.uk/finder/stepconsultantprofile/dr-benji-schreiber"
+  ]
 };
 
 export default function RootLayout({
