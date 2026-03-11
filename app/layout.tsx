@@ -64,12 +64,6 @@ const schemaMarkup = {
       "address": { "@type": "PostalAddress", "streetAddress": "60 Grove End Road", "addressLocality": "London", "postalCode": "NW8 9NH", "addressCountry": "GB" }
     }
   ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "110",
-    "bestRating": "5"
-  },
   "sameAs": [
     "https://www.doctify.com/uk/specialist/dr-benji-schreiber",
     "https://www.hcahealthcare.co.uk/finder/stepconsultantprofile/dr-benji-schreiber"

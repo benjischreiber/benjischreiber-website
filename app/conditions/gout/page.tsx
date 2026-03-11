@@ -138,7 +138,7 @@ export default function GoutPage() {
                 advice includes reducing red meat, shellfish, fructose and alcohol (particularly beer),
                 maintaining adequate hydration and achieving a healthy body weight. Review of
                 medications that elevate urate — particularly thiazide diuretics — may be possible
-                in collaboration with the patient's GP or cardiologist.
+                in collaboration with the patient&apos;s GP or cardiologist.
               </p>
             </div>
           </div>

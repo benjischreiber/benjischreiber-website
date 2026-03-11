@@ -16,6 +16,13 @@ const navLinks = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === href;
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
 
   return (
     <header className="bg-white border-b border-navy-100 sticky top-0 z-50 shadow-sm">
@@ -38,7 +45,7 @@ export default function Navbar() {
               href={link.href}
               className={`text-sm font-medium tracking-wide transition-colors duration-150
                 ${
-                  pathname === link.href
+                  isActive(link.href)
                     ? "text-gold-500 border-b-2 border-gold-500 pb-0.5"
                     : "text-navy-700 hover:text-gold-500"
                 }`}
@@ -104,7 +111,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
                 className={`text-sm font-medium tracking-wide py-1 border-b border-navy-50
-                  ${pathname === link.href ? "text-gold-500" : "text-navy-700"}`}
+                  ${isActive(link.href) ? "text-gold-500" : "text-navy-700"}`}
               >
                 {link.label}
               </Link>

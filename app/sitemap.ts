@@ -3,8 +3,6 @@ import type { MetadataRoute } from "next";
 const BASE_URL = "https://www.benjischreiber.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
   const staticPages = [
     { url: "/", priority: 1.0, changeFrequency: "monthly" as const },
     { url: "/about", priority: 0.9, changeFrequency: "monthly" as const },
@@ -33,13 +31,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages.map(({ url, priority, changeFrequency }) => ({
       url: `${BASE_URL}${url}`,
-      lastModified: now,
       changeFrequency,
       priority,
     })),
     ...conditionPages.map((url) => ({
       url: `${BASE_URL}${url}`,
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),

@@ -42,7 +42,7 @@ export default function PsoriaticArthritisPage() {
               <p>
                 Unlike rheumatoid arthritis, psoriatic arthritis can affect joints asymmetrically and has
                 characteristic patterns such as involvement of the distal joints of the fingers and toes (DIP
-                joints), and the distinctive "sausage digit" or dactylitis — diffuse swelling of an entire finger
+                joints), and the distinctive &ldquo;sausage digit&rdquo; or dactylitis — diffuse swelling of an entire finger
                 or toe. Nail changes including pitting, onycholysis and subungual hyperkeratosis are common and
                 are closely associated with DIP joint disease.
               </p>

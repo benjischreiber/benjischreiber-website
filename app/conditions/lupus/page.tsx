@@ -33,7 +33,7 @@ export default function LupusPage() {
             <div className="space-y-4 text-navy-600 leading-relaxed">
               <p>
                 Systemic lupus erythematosus (SLE) is a chronic autoimmune condition in which the immune system
-                produces antibodies against the body's own cells and tissues, causing inflammation and damage
+                produces antibodies against the body&apos;s own cells and tissues, causing inflammation and damage
                 across multiple organ systems. The kidneys, skin, joints, brain, heart, lungs, and blood cells
                 can all be affected. The condition is characterised by a relapsing and remitting course, with
                 periods of disease activity (flares) interspersed with periods of relative quiescence.
@@ -156,7 +156,7 @@ export default function LupusPage() {
               <p>
                 Lupus is one of the most clinically complex conditions in medicine. Its protean manifestations,
                 the need for careful serological and immunological interpretation, and the increasing number
-                of targeted therapies all demand specialist expertise. Dr. Schreiber's research background is in
+                of targeted therapies all demand specialist expertise. Dr. Schreiber&apos;s research background is in
                 connective tissue disease and pulmonary complications thereof — areas of particular relevance
                 in lupus, where interstitial lung disease and pulmonary hypertension represent important
                 and potentially life-limiting complications.

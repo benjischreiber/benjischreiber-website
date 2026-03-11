@@ -35,7 +35,7 @@ export default function FibromyalgiaPage() {
               <p>
                 Fibromyalgia is a chronic pain disorder characterised by widespread musculoskeletal pain,
                 profound fatigue, sleep disturbance, and often cognitive difficulties. It is now understood
-                as a disorder of central pain processing — sometimes termed "central sensitisation" — in
+                as a disorder of central pain processing — sometimes termed &ldquo;central sensitisation&rdquo; — in
                 which the nervous system amplifies pain signals, making ordinarily non-painful stimuli
                 feel painful. It is not an inflammatory or autoimmune condition, and does not cause joint
                 or tissue damage.

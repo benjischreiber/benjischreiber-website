@@ -131,7 +131,7 @@ export default function GiantCellArteritisPage() {
                 according to symptoms and inflammatory markers. Bone protection should be initiated from
                 the outset. Relapses requiring dose increase are common during tapering. Low-dose aspirin
                 may be considered to reduce the risk of ischaemic complications, in discussion with the
-                patient's other clinicians.
+                patient&apos;s other clinicians.
               </p>
               <p>
                 Tocilizumab — an IL-6 receptor inhibitor given as a weekly subcutaneous injection — is

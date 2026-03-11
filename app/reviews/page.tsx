@@ -2,9 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 const DOCTIFY_URL = "https://www.doctify.com/uk/specialist/dr-benji-schreiber";
-const DOCTIFY_REVIEW_URL = "https://doctify.com/uk/review/lm68ii";
-const GOOGLE_URL = "https://g.page/dr-benji-schreiber-consultant-r/review?nr";
 const GOOGLE_READ_URL = "https://g.page/dr-benji-schreiber-consultant-r";
+const REVIEW_SUMMARY = "100+ reviews";
 
 export const metadata: Metadata = {
   title: "Patient Reviews",
@@ -16,32 +15,26 @@ const reviews = [
   {
     text: "Dr Schreiber is a star. He has helped me immeasurably, taking the time to explain everything to me from the outset in a friendly and professional manner. I'm on a journey and have always felt that he has been on the journey with me.",
     author: "Darren P.",
-    source: "Google",
   },
   {
     text: "He is attentive, asks questions, and carefully listens to replies in order to understand and correctly diagnose the cause of discomfort. He is committed to improving patients' health. His expertise and compassion made me feel reassured and confident that I am in good hands.",
     author: "Sylvia",
-    source: "Google",
   },
   {
     text: "After almost one year of treatment Dr Schreiber has transformed my life. His calm, sympathetic approach to my health issues transcend all boundaries.",
     author: "David L.",
-    source: "Google",
   },
   {
     text: "Dr Schreiber is an exceptionally thoughtful and caring doctor who inspires trust and confidence. He is a good communicator which to me, matters just as much as his clinical expertise.",
     author: "Sarah B.",
-    source: "Google",
   },
   {
     text: "I had an excellent experience with Dr Schreiber. He was very understanding and took the time to really listen to my concerns. What stood out most was how clearly he explained things — breaking down complex medical terms into plain English.",
     author: "Jessica H.",
-    source: "Google",
   },
   {
     text: "Dr. Schreiber is a rare find in the rheumatology field. He was the first doctor to take a thorough, holistic approach — and it made all the difference.",
     author: "Samujjal P.",
-    source: "Google",
   },
 ];
 
@@ -83,7 +76,7 @@ export default function ReviewsPage() {
           <h1 className="text-4xl md:text-5xl font-serif">Patient Reviews</h1>
           <div className="w-12 h-0.5 bg-gold-500 mt-5 mb-5" />
           <p className="text-navy-300 max-w-2xl leading-relaxed">
-            Dr. Schreiber is rated 5.0 on Google across over 110 reviews. Below is a
+            Dr. Schreiber is rated 5.0 on Google across over 100 reviews. Below is a
             selection — read the full collection on Google or Doctify.
           </p>
         </div>
@@ -112,7 +105,7 @@ export default function ReviewsPage() {
                       </svg>
                     ))}
                   </div>
-                  <span className="text-navy-400 text-xs">110+ reviews</span>
+                  <span className="text-navy-400 text-xs">{REVIEW_SUMMARY}</span>
                 </div>
               </div>
             </a>
@@ -180,7 +173,7 @@ export default function ReviewsPage() {
               rel="noopener noreferrer"
               className="btn-outline"
             >
-              Read all 110+ reviews on Google
+              Read Google reviews
             </a>
           </div>
         </div>

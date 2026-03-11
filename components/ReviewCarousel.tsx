@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const reviews = [
   { text: "Dr Schreiber has transformed my life. His calm, sympathetic approach to my health issues transcend all boundaries.", author: "David L." },
@@ -32,22 +32,34 @@ const reviews = [
 export default function ReviewCarousel() {
   const [current, setCurrent] = useState(0);
   const [fading, setFading] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setFading(true);
-      setTimeout(() => {
+      timeoutRef.current = setTimeout(() => {
         setCurrent((prev) => (prev + 1) % reviews.length);
         setFading(false);
       }, 400);
     }, 5000);
-    return () => clearInterval(interval);
+
+    return () => {
+      clearInterval(interval);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
   }, []);
 
   const goTo = (index: number) => {
     if (index === current) return;
+
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
     setFading(true);
-    setTimeout(() => {
+    timeoutRef.current = setTimeout(() => {
       setCurrent(index);
       setFading(false);
     }, 400);

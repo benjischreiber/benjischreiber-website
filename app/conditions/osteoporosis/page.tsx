@@ -34,7 +34,7 @@ export default function OsteoporosisPage() {
               <p>
                 Osteoporosis is a skeletal disorder in which bone mineral density is reduced and bone
                 microarchitecture is disrupted, resulting in increased bone fragility and susceptibility
-                to fracture. It is often described as a "silent" condition because bone loss occurs without
+                to fracture. It is often described as a &ldquo;silent&rdquo; condition because bone loss occurs without
                 symptoms until a fracture occurs. Fragility fractures — those resulting from low-energy
                 trauma such as a fall from standing height — most commonly affect the vertebrae, hip, wrist
                 and shoulder.

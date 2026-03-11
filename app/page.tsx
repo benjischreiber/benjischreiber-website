@@ -3,6 +3,8 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import ReviewCarousel from "@/components/ReviewCarousel";
 
+const REVIEW_SUMMARY = "100+ Google reviews";
+
 export const metadata: Metadata = {
   title: "Private Rheumatologist London | Dr. Benji Schreiber",
   description:
@@ -159,7 +161,7 @@ export default function HomePage() {
                 ))}
               </div>
               <span className="text-white font-serif text-lg">5.0</span>
-              <span className="text-navy-400 text-sm">· 110+ Google reviews</span>
+              <span className="text-navy-400 text-sm">· {REVIEW_SUMMARY}</span>
             </div>
           </div>
           <ReviewCarousel />
