@@ -106,18 +106,7 @@ export default function ReviewCarousel() {
         </p>
       </div>
 
-      <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <button
-          type="button"
-          onClick={() => goTo((current - 1 + reviews.length) % reviews.length)}
-          className="rounded-full border border-navy-700 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-navy-300 transition-colors hover:border-gold-400 hover:text-white"
-          aria-label="Show previous review"
-        >
-          Prev
-        </button>
-
-        {/* Dot indicators */}
-        <div className="flex max-w-full flex-wrap justify-center gap-2">
+      <div className="mt-8 flex max-w-full flex-wrap justify-center gap-2">
         {reviews.map((_, i) => (
           <button
             key={i}
@@ -132,16 +121,6 @@ export default function ReviewCarousel() {
             }`}
           />
         ))}
-        </div>
-
-        <button
-          type="button"
-          onClick={() => setIsPaused((paused) => !paused)}
-          className="rounded-full border border-navy-700 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-navy-300 transition-colors hover:border-gold-400 hover:text-white"
-          aria-pressed={isPaused}
-        >
-          {isPaused || prefersReducedMotion ? "Play" : "Pause"}
-        </button>
       </div>
     </div>
   );
