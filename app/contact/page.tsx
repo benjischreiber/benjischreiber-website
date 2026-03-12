@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import InquiryForm from "@/components/InquiryForm";
 
 export const metadata: Metadata = {
   title: "Contact & Appointments",
@@ -182,91 +183,7 @@ export default function ContactPage() {
                 <h2 className="section-title text-2xl">Appointment Enquiry</h2>
                 <div className="divider-gold" />
               </div>
-              <form className="space-y-5" action="https://formspree.io/f/mkovpegz" method="POST">
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label htmlFor="firstName" className="block text-xs font-semibold text-navy-600 uppercase tracking-widest mb-2">
-                      First Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      required
-                      className="w-full border border-navy-200 px-4 py-3 text-sm text-navy-800 focus:outline-none focus:border-gold-400 transition-colors"
-                      placeholder="Jane"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-xs font-semibold text-navy-600 uppercase tracking-widest mb-2">
-                      Last Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      required
-                      className="w-full border border-navy-200 px-4 py-3 text-sm text-navy-800 focus:outline-none focus:border-gold-400 transition-colors"
-                      placeholder="Smith"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-xs font-semibold text-navy-600 uppercase tracking-widest mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full border border-navy-200 px-4 py-3 text-sm text-navy-800 focus:outline-none focus:border-gold-400 transition-colors"
-                    placeholder="jane@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-xs font-semibold text-navy-600 uppercase tracking-widest mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full border border-navy-200 px-4 py-3 text-sm text-navy-800 focus:outline-none focus:border-gold-400 transition-colors"
-                    placeholder="+44 7700 000000"
-                  />
-                </div>
-
-
-                <div>
-                  <label htmlFor="message" className="block text-xs font-semibold text-navy-600 uppercase tracking-widest mb-2">
-                    Reason for Appointment / Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    className="w-full border border-navy-200 px-4 py-3 text-sm text-navy-800 focus:outline-none focus:border-gold-400 transition-colors resize-none"
-                    placeholder="Please briefly describe your symptoms or the reason you would like to see Dr. Schreiber."
-                  />
-                </div>
-
-                <div className="space-y-1 text-xs text-navy-400">
-                  <p>* Required fields.</p>
-                  <p>We respond to all enquiries within one working day.</p>
-                  <p>All enquiries are confidential. Your information is handled securely and will only be used to respond to your enquiry.</p>
-                </div>
-
-                <button
-                  type="submit"
-                  className="btn-primary w-full sm:w-auto"
-                >
-                  Send Enquiry
-                </button>
-              </form>
+              <InquiryForm />
             </div>
           </div>
         </div>

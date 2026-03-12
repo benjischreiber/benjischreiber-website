@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import ReviewCarousel from "@/components/ReviewCarousel";
+import InquiryForm from "@/components/InquiryForm";
 
 const REVIEW_SUMMARY = "100+ Google reviews";
 
@@ -16,6 +17,7 @@ const specialties = [
     title: "Inflammatory Arthritis",
     description:
       "Expert diagnosis and management of rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis and other inflammatory joint conditions.",
+    href: "/conditions/rheumatoid-arthritis",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -27,6 +29,7 @@ const specialties = [
     title: "Connective Tissue Diseases",
     description:
       "Specialist care for lupus (SLE), scleroderma, Sjögren's syndrome, myositis and overlap syndromes, including pulmonary complications.",
+    href: "/conditions/lupus",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -38,6 +41,7 @@ const specialties = [
     title: "Osteoporosis & Bone Health",
     description:
       "Assessment and treatment of osteoporosis and metabolic bone disease, with access to DEXA scanning and the full range of bone-protective therapies.",
+    href: "/conditions/osteoporosis",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -49,6 +53,7 @@ const specialties = [
     title: "Soft Tissue & Joint Pain",
     description:
       "Diagnosis and treatment of fibromyalgia, chronic pain syndromes, hypermobility, bursitis, tendinopathy and other soft tissue conditions.",
+    href: "/conditions/fibromyalgia",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -60,6 +65,7 @@ const specialties = [
     title: "Gout & Crystal Arthritis",
     description:
       "Comprehensive management of gout, pseudogout and calcium pyrophosphate deposition disease, including long-term urate-lowering therapy.",
+    href: "/conditions/gout",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -71,6 +77,7 @@ const specialties = [
     title: "Medicolegal Reports",
     description:
       "Expert witness reports for personal injury and clinical negligence cases in general rheumatology, chronic pain, connective tissue disease and pulmonary hypertension.",
+    href: "/medicolegal",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -257,8 +264,9 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {specialties.map((s) => (
-              <div
+              <Link
                 key={s.title}
+                href={s.href}
                 className="bg-white p-8 border border-navy-100 hover:border-gold-300 hover:shadow-md transition-all duration-200 group"
               >
                 <div className="text-gold-500 mb-4 group-hover:scale-110 transition-transform duration-200">
@@ -266,7 +274,10 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-serif text-navy-900 text-lg mb-3">{s.title}</h3>
                 <p className="text-navy-500 text-sm leading-relaxed">{s.description}</p>
-              </div>
+                <span className="mt-5 inline-block text-sm font-medium text-gold-600 underline underline-offset-2">
+                  Learn more
+                </span>
+              </Link>
             ))}
           </div>
           <div className="text-center mt-10 flex gap-4 justify-center flex-wrap">
@@ -387,81 +398,11 @@ export default function HomePage() {
             {/* Right form */}
             <div className="bg-white p-8 shadow-xl">
               <h3 className="font-serif text-navy-900 text-lg mb-6">Quick Appointment Request</h3>
-              <form action="https://formspree.io/f/mkovpegz" method="POST" className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="home-firstName" className="block text-xs font-semibold text-navy-500 uppercase tracking-widest mb-1.5">
-                      First Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="home-firstName"
-                      name="firstName"
-                      required
-                      className="w-full border border-navy-200 px-3 py-2.5 text-sm text-navy-800 focus:outline-none focus:border-gold-400 transition-colors"
-                      placeholder="Jane"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="home-lastName" className="block text-xs font-semibold text-navy-500 uppercase tracking-widest mb-1.5">
-                      Last Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="home-lastName"
-                      name="lastName"
-                      required
-                      className="w-full border border-navy-200 px-3 py-2.5 text-sm text-navy-800 focus:outline-none focus:border-gold-400 transition-colors"
-                      placeholder="Smith"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="home-email" className="block text-xs font-semibold text-navy-500 uppercase tracking-widest mb-1.5">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="home-email"
-                    name="email"
-                    required
-                    className="w-full border border-navy-200 px-3 py-2.5 text-sm text-navy-800 focus:outline-none focus:border-gold-400 transition-colors"
-                    placeholder="jane@example.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="home-phone" className="block text-xs font-semibold text-navy-500 uppercase tracking-widest mb-1.5">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    id="home-phone"
-                    name="phone"
-                    className="w-full border border-navy-200 px-3 py-2.5 text-sm text-navy-800 focus:outline-none focus:border-gold-400 transition-colors"
-                    placeholder="07700 000000"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="home-reason" className="block text-xs font-semibold text-navy-500 uppercase tracking-widest mb-1.5">
-                    Reason / Symptoms *
-                  </label>
-                  <textarea
-                    id="home-reason"
-                    name="reason"
-                    required
-                    rows={3}
-                    className="w-full border border-navy-200 px-3 py-2.5 text-sm text-navy-800 focus:outline-none focus:border-gold-400 transition-colors resize-none"
-                    placeholder="Please briefly describe your symptoms or reason for appointment."
-                  />
-                </div>
-                <button type="submit" className="btn-primary w-full text-center">
-                  Send Request
-                </button>
-                <div className="space-y-1 text-xs text-navy-400 text-center">
-                  <p>Olivia Skeet (secretary) will respond within one working day.</p>
-                  <p>All enquiries are confidential and handled securely.</p>
-                </div>
-              </form>
+              <InquiryForm
+                compact
+                submitLabel="Send Request"
+                successMessage="Thank you. Your appointment request has been sent and Olivia Skeet will be in touch within one working day."
+              />
             </div>
           </div>
         </div>

@@ -32,9 +32,27 @@ const reviews = [
 export default function ReviewCarousel() {
   const [current, setCurrent] = useState(0);
   const [fading, setFading] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updateMotionPreference = () => setPrefersReducedMotion(mediaQuery.matches);
+
+    updateMotionPreference();
+    mediaQuery.addEventListener("change", updateMotionPreference);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateMotionPreference);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isPaused || prefersReducedMotion) {
+      return;
+    }
+
     const interval = setInterval(() => {
       setFading(true);
       timeoutRef.current = setTimeout(() => {
@@ -49,7 +67,7 @@ export default function ReviewCarousel() {
         clearTimeout(timeoutRef.current);
       }
     };
-  }, []);
+  }, [isPaused, prefersReducedMotion]);
 
   const goTo = (index: number) => {
     if (index === current) return;
@@ -68,10 +86,16 @@ export default function ReviewCarousel() {
   const review = reviews[current];
 
   return (
-    <div className="max-w-2xl mx-auto text-center">
+    <div
+      className="max-w-2xl mx-auto text-center"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocus={() => setIsPaused(true)}
+      onBlur={() => setIsPaused(false)}
+    >
       {/* Quote */}
       <div
-        className="transition-opacity duration-400"
+        className="transition-opacity duration-300"
         style={{ opacity: fading ? 0 : 1 }}
       >
         <blockquote className="text-navy-100 text-lg leading-relaxed italic mb-5">
@@ -82,13 +106,25 @@ export default function ReviewCarousel() {
         </p>
       </div>
 
-      {/* Dot indicators */}
-      <div className="flex justify-center gap-2 mt-8">
+      <div className="mt-8 flex items-center justify-center gap-4">
+        <button
+          type="button"
+          onClick={() => goTo((current - 1 + reviews.length) % reviews.length)}
+          className="rounded-full border border-navy-700 px-3 py-2 text-xs font-semibold uppercase tracking-widest text-navy-300 transition-colors hover:border-gold-400 hover:text-white"
+          aria-label="Show previous review"
+        >
+          Prev
+        </button>
+
+        {/* Dot indicators */}
+        <div className="flex justify-center gap-2">
         {reviews.map((_, i) => (
           <button
             key={i}
+            type="button"
             onClick={() => goTo(i)}
             aria-label={`Review ${i + 1}`}
+            aria-pressed={i === current}
             className={`rounded-full transition-all duration-300 ${
               i === current
                 ? "bg-gold-400 w-5 h-2"
@@ -96,6 +132,16 @@ export default function ReviewCarousel() {
             }`}
           />
         ))}
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setIsPaused((paused) => !paused)}
+          className="rounded-full border border-navy-700 px-3 py-2 text-xs font-semibold uppercase tracking-widest text-navy-300 transition-colors hover:border-gold-400 hover:text-white"
+          aria-pressed={isPaused}
+        >
+          {isPaused || prefersReducedMotion ? "Play" : "Pause"}
+        </button>
       </div>
     </div>
   );

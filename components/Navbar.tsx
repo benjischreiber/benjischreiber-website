@@ -8,6 +8,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/conditions", label: "Conditions" },
+  { href: "/fees", label: "Fees" },
   { href: "/medicolegal", label: "Medicolegal" },
   { href: "/consulting-rooms", label: "Locations" },
   { href: "/reviews", label: "Reviews" },
@@ -75,6 +76,8 @@ export default function Navbar() {
           className="lg:hidden p-2 text-navy-800"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
         >
           <svg
             className="w-6 h-6"
@@ -103,7 +106,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-white border-t border-navy-100 px-6 pb-6">
+        <div id="mobile-navigation" className="lg:hidden bg-white border-t border-navy-100 px-6 pb-6">
           <nav className="flex flex-col gap-4 pt-4">
             {navLinks.map((link) => (
               <Link
