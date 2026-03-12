@@ -145,7 +145,7 @@ export default function HomePage() {
         <div className="container-content py-6">
           <div className="grid grid-cols-2 gap-3 text-center text-white sm:gap-4 md:grid-cols-3 lg:grid-cols-6 lg:gap-6">
             {credentials.map((c) => (
-              <div key={c.label} className="rounded-sm border border-white/20 bg-white/10 px-3 py-4">
+              <div key={c.label} className="px-2 py-2">
                 <p className="font-serif text-base font-semibold sm:text-lg">{c.value}</p>
                 <p className="mt-1 text-[10px] uppercase tracking-[0.2em] opacity-80">{c.label}</p>
               </div>

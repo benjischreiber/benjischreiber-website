@@ -27,19 +27,19 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-navy-100 bg-white/95 shadow-sm backdrop-blur">
-      <div className="container-content flex h-16 items-center justify-between sm:h-20">
+      <div className="container-content flex h-16 items-center justify-between gap-6 sm:h-20 lg:gap-10">
         {/* Logo / Name */}
-        <Link href="/" className="flex flex-col leading-tight">
-          <span className="whitespace-nowrap font-serif text-sm font-semibold tracking-wide text-navy-900 sm:text-base">
+        <Link href="/" className="flex flex-col leading-tight lg:mr-4">
+          <span className="whitespace-nowrap font-serif text-sm font-semibold tracking-[0.01em] text-navy-900 sm:text-base">
             Dr. Benji Schreiber
           </span>
-          <span className="whitespace-nowrap text-[9px] font-semibold uppercase tracking-[0.22em] text-gold-500 sm:text-[10px]">
+          <span className="whitespace-nowrap text-[9px] font-semibold uppercase tracking-[0.16em] text-gold-500 sm:text-[10px]">
             Consultant Rheumatologist
           </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden lg:flex flex-1 items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -54,9 +54,6 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link href="/contact" className="btn-primary ml-2 !py-2 !px-5">
-            Book Appointment
-          </Link>
         </nav>
 
         {/* Mobile click-to-call */}
