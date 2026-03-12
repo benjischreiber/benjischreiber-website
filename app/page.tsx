@@ -102,33 +102,33 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative bg-navy-950 text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 opacity-95" />
-        <div className="relative container-content section-padding flex flex-col md:flex-row items-center gap-12 md:gap-16">
+        <div className="relative container-content section-padding flex flex-col items-center gap-10 md:flex-row md:gap-16">
           {/* Text */}
-          <div className="flex-1 max-w-2xl">
+          <div className="max-w-2xl flex-1 text-center md:text-left">
             <p className="section-label !text-gold-400">Private Consultant Rheumatologist · North London</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight mb-4">
+            <h1 className="mb-4 text-3xl font-serif leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
               Dr. Benji Schreiber
             </h1>
-            <p className="text-gold-300 text-sm tracking-wide mb-5">
+            <p className="mb-5 text-sm tracking-wide text-gold-300 sm:text-[15px]">
               Consultant-delivered care from first appointment to follow-up — no registrars, no delegation.
             </p>
-            <div className="w-12 h-0.5 bg-gold-500 mb-6" />
-            <p className="text-navy-300 text-lg leading-relaxed mb-8 max-w-xl">
+            <div className="mx-auto mb-6 h-0.5 w-12 bg-gold-500 md:mx-0" />
+            <p className="mx-auto mb-8 max-w-xl text-base leading-8 text-navy-300 sm:text-lg md:mx-0">
               A leading specialist in inflammatory arthritis, connective tissue diseases and general
               rheumatology, practising privately at two North London locations.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="btn-primary">
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap md:justify-start">
+              <Link href="/contact" className="btn-primary w-full sm:w-auto">
                 Book an Appointment
               </Link>
-              <Link href="/about" className="btn-outline !border-navy-400 !text-navy-200 hover:!bg-navy-800 hover:!text-white">
+              <Link href="/about" className="btn-outline w-full !border-navy-400 !text-navy-200 hover:!bg-navy-800 hover:!text-white sm:w-auto">
                 Learn More
               </Link>
             </div>
           </div>
 
           {/* Headshot */}
-          <div className="flex-shrink-0 w-64 h-80 md:w-72 md:h-96 relative">
+          <div className="relative h-72 w-56 flex-shrink-0 sm:h-80 sm:w-64 md:h-96 md:w-72">
             <Image
               src="/images/benji.png"
               alt="Dr. Benji Schreiber — Consultant Rheumatologist"
@@ -143,11 +143,11 @@ export default function HomePage() {
       {/* Credentials strip */}
       <section className="bg-gold-500">
         <div className="container-content py-6">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-white text-center">
+          <div className="grid grid-cols-2 gap-3 text-center text-white sm:gap-4 md:grid-cols-3 lg:grid-cols-6 lg:gap-6">
             {credentials.map((c) => (
-              <div key={c.label}>
-                <p className="font-serif text-lg font-semibold">{c.value}</p>
-                <p className="text-xs tracking-widest uppercase opacity-80 mt-0.5">{c.label}</p>
+              <div key={c.label} className="rounded-sm border border-white/20 bg-white/10 px-3 py-4">
+                <p className="font-serif text-base font-semibold sm:text-lg">{c.value}</p>
+                <p className="mt-1 text-[10px] uppercase tracking-[0.2em] opacity-80">{c.label}</p>
               </div>
             ))}
           </div>
@@ -239,15 +239,15 @@ export default function HomePage() {
 
       {/* CTA after My Approach */}
       <section className="bg-gold-500 py-10">
-        <div className="container-content flex flex-col sm:flex-row items-center justify-between gap-6">
-          <p className="text-white font-serif text-lg text-center sm:text-left">
+        <div className="container-content flex flex-col items-center justify-between gap-6 sm:flex-row">
+          <p className="text-center font-serif text-lg text-white sm:text-left">
             Ready to book a consultation with Dr. Schreiber?
           </p>
-          <div className="flex gap-3 flex-shrink-0">
-            <Link href="/contact" className="bg-white text-gold-600 font-semibold text-sm uppercase tracking-widest px-6 py-3 hover:bg-navy-50 transition-colors duration-150">
+          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-shrink-0">
+            <Link href="/contact" className="btn-outline w-full !border-white !bg-white !px-6 !py-3 !text-gold-600 hover:!bg-navy-50 sm:w-auto">
               Book an Appointment
             </Link>
-            <a href="tel:02084586775" className="border border-white text-white font-semibold text-sm uppercase tracking-widest px-6 py-3 hover:bg-gold-600 transition-colors duration-150">
+            <a href="tel:02084586775" className="btn-outline w-full !border-white !text-white hover:!bg-gold-600 sm:w-auto">
               020 8458 6775
             </a>
           </div>
@@ -262,29 +262,29 @@ export default function HomePage() {
             <h2 className="section-title">Conditions &amp; Services</h2>
             <div className="divider-gold mx-auto" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {specialties.map((s) => (
               <Link
                 key={s.title}
                 href={s.href}
-                className="bg-white p-8 border border-navy-100 hover:border-gold-300 hover:shadow-md transition-all duration-200 group"
+                className="card-panel group flex h-full flex-col p-6 transition-all duration-200 hover:-translate-y-1 hover:border-gold-300 hover:shadow-md sm:p-8"
               >
                 <div className="text-gold-500 mb-4 group-hover:scale-110 transition-transform duration-200">
                   {s.icon}
                 </div>
                 <h3 className="font-serif text-navy-900 text-lg mb-3">{s.title}</h3>
                 <p className="text-navy-500 text-sm leading-relaxed">{s.description}</p>
-                <span className="mt-5 inline-block text-sm font-medium text-gold-600 underline underline-offset-2">
+                <span className="mt-auto pt-5 text-sm font-medium text-gold-600 underline underline-offset-2">
                   Learn more
                 </span>
               </Link>
             ))}
           </div>
-          <div className="text-center mt-10 flex gap-4 justify-center flex-wrap">
-            <Link href="/contact" className="btn-primary">
+          <div className="mt-10 flex flex-col justify-center gap-3 text-center sm:flex-row sm:flex-wrap sm:gap-4">
+            <Link href="/contact" className="btn-primary w-full sm:w-auto">
               Book a Consultation
             </Link>
-            <Link href="/conditions" className="btn-outline">
+            <Link href="/conditions" className="btn-outline w-full sm:w-auto">
               View All Conditions
             </Link>
           </div>
@@ -303,9 +303,9 @@ export default function HomePage() {
               both offering on-site diagnostics and easy access by tube, bus or car.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2 md:gap-8">
             {/* Location 1 */}
-            <div className="bg-navy-50 border border-navy-100 p-8 hover:border-gold-300 hover:shadow-sm transition-all duration-200">
+            <div className="card-panel bg-navy-50 p-6 transition-all duration-200 hover:border-gold-300 hover:shadow-sm sm:p-8">
               <p className="text-xs text-gold-500 uppercase tracking-widest font-semibold mb-3">Location 1</p>
               <h3 className="font-serif text-navy-900 text-lg mb-1">Wellington Diagnostics</h3>
               <p className="text-navy-500 text-sm mb-4">Golders Green, North London</p>
@@ -328,7 +328,7 @@ export default function HomePage() {
               </a>
             </div>
             {/* Location 2 */}
-            <div className="bg-navy-50 border border-navy-100 p-8 hover:border-gold-300 hover:shadow-sm transition-all duration-200">
+            <div className="card-panel bg-navy-50 p-6 transition-all duration-200 hover:border-gold-300 hover:shadow-sm sm:p-8">
               <p className="text-xs text-gold-500 uppercase tracking-widest font-semibold mb-3">Location 2</p>
               <h3 className="font-serif text-navy-900 text-lg mb-1">Hospital of St John &amp; St Elizabeth</h3>
               <p className="text-navy-500 text-sm mb-4">St John&apos;s Wood, North London</p>
@@ -351,8 +351,8 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-          <div className="text-center mt-8">
-            <Link href="/consulting-rooms" className="btn-outline">
+          <div className="mt-8 text-center">
+            <Link href="/consulting-rooms" className="btn-outline w-full sm:w-auto">
               Full directions &amp; maps
             </Link>
           </div>
@@ -362,30 +362,30 @@ export default function HomePage() {
       {/* Quick appointment request form */}
       <section className="section-padding bg-navy-950" id="request-appointment">
         <div className="container-content">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12">
             {/* Left text */}
-            <div>
+            <div className="text-center md:text-left">
               <p className="section-label !text-gold-400">Get in Touch</p>
               <h2 className="section-title !text-white mb-4">Request an Appointment</h2>
-              <div className="w-12 h-0.5 bg-gold-500 mb-6" />
-              <p className="text-navy-300 leading-relaxed mb-4">
+              <div className="mx-auto mb-6 h-0.5 w-12 bg-gold-500 md:mx-0" />
+              <p className="mb-4 text-navy-300 leading-8">
                 To book a consultation with Dr. Schreiber, please fill in your details and we
                 will respond within one working day.
               </p>
               <div className="space-y-3 text-sm text-navy-400">
-                <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center gap-3 md:justify-start">
                   <svg className="w-4 h-4 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   <a href="tel:02084586775" className="hover:text-gold-400 transition-colors">020 8458 6775</a>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center gap-3 md:justify-start">
                   <svg className="w-4 h-4 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   <a href="mailto:info@benjischreiber.com" className="hover:text-gold-400 transition-colors">info@benjischreiber.com</a>
                 </div>
-                <div className="flex items-start gap-3">
+                <div className="flex items-start justify-center gap-3 text-left md:justify-start">
                   <svg className="w-4 h-4 text-gold-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -396,7 +396,7 @@ export default function HomePage() {
             </div>
 
             {/* Right form */}
-            <div className="bg-white p-8 shadow-xl">
+            <div className="card-panel bg-white p-6 sm:p-8">
               <h3 className="font-serif text-navy-900 text-lg mb-6">Quick Appointment Request</h3>
               <InquiryForm
                 compact

@@ -50,12 +50,12 @@ export default function ContactPage() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-navy-950 text-white py-20">
+      <section className="bg-navy-950 py-16 text-white sm:py-20">
         <div className="container-content">
           <p className="section-label !text-gold-400">Get in Touch</p>
-          <h1 className="text-4xl md:text-5xl font-serif">Contact &amp; Appointments</h1>
+          <h1 className="text-3xl font-serif md:text-5xl">Contact &amp; Appointments</h1>
           <div className="w-12 h-0.5 bg-gold-500 mt-5 mb-5" />
-          <p className="text-navy-300 max-w-2xl leading-relaxed">
+          <p className="max-w-2xl text-navy-300 leading-8">
             To book a consultation or make an enquiry, please contact Olivia Skeet, Dr. Schreiber&apos;s secretary.
             We aim to respond to all enquiries within one working day.
           </p>
@@ -65,7 +65,7 @@ export default function ContactPage() {
       {/* Contact cards + form */}
       <section className="section-padding bg-white">
         <div className="container-content">
-          <div className="grid md:grid-cols-5 gap-12">
+          <div className="grid gap-10 md:grid-cols-5 md:gap-12">
             {/* Contact info */}
             <div className="md:col-span-2 space-y-6">
               <div>
@@ -75,7 +75,7 @@ export default function ContactPage() {
               </div>
 
               {/* Phone */}
-              <div className="flex gap-4 items-start p-5 bg-navy-50 border border-navy-100">
+              <div className="card-panel flex items-start gap-4 bg-navy-50 p-5">
                 <div className="text-gold-500 mt-0.5">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -94,7 +94,7 @@ export default function ContactPage() {
               </div>
 
               {/* Email */}
-              <div className="flex gap-4 items-start p-5 bg-navy-50 border border-navy-100">
+              <div className="card-panel flex items-start gap-4 bg-navy-50 p-5">
                 <div className="text-gold-500 mt-0.5">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -113,7 +113,7 @@ export default function ContactPage() {
               </div>
 
               {/* Address */}
-              <div className="flex gap-4 items-start p-5 bg-navy-50 border border-navy-100">
+              <div className="card-panel flex items-start gap-4 bg-navy-50 p-5">
                 <div className="text-gold-500 mt-0.5">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -134,7 +134,7 @@ export default function ContactPage() {
               </div>
 
               {/* Hours */}
-              <div className="flex gap-4 items-start p-5 bg-navy-50 border border-navy-100">
+              <div className="card-panel flex items-start gap-4 bg-navy-50 p-5">
                 <div className="text-gold-500 mt-0.5">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -149,7 +149,7 @@ export default function ContactPage() {
               </div>
 
               {/* Online booking via HCA */}
-              <div className="flex gap-4 items-start p-5 bg-navy-50 border border-navy-100">
+              <div className="card-panel flex items-start gap-4 bg-navy-50 p-5">
                 <div className="text-gold-500 mt-0.5">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -183,7 +183,9 @@ export default function ContactPage() {
                 <h2 className="section-title text-2xl">Appointment Enquiry</h2>
                 <div className="divider-gold" />
               </div>
-              <InquiryForm />
+              <div className="card-panel p-6 sm:p-8">
+                <InquiryForm />
+              </div>
             </div>
           </div>
         </div>
@@ -198,7 +200,7 @@ export default function ContactPage() {
             <div className="divider-gold" />
             <div className="space-y-6 mt-2">
               {faqs.map((faq) => (
-                <div key={faq.q} className="bg-white p-6 border border-navy-100">
+                <div key={faq.q} className="card-panel bg-white p-6">
                   <h3 className="font-serif text-navy-900 font-semibold mb-2">{faq.q}</h3>
                   <p className="text-navy-500 text-sm leading-relaxed">{faq.a}</p>
                 </div>

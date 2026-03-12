@@ -87,7 +87,7 @@ export default function ReviewCarousel() {
 
   return (
     <div
-      className="max-w-2xl mx-auto text-center"
+      className="mx-auto max-w-3xl text-center"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onFocus={() => setIsPaused(true)}
@@ -98,26 +98,26 @@ export default function ReviewCarousel() {
         className="transition-opacity duration-300"
         style={{ opacity: fading ? 0 : 1 }}
       >
-        <blockquote className="text-navy-100 text-lg leading-relaxed italic mb-5">
+        <blockquote className="mx-auto max-w-2xl text-balance text-base italic leading-8 text-navy-100 sm:text-lg">
           {"\u201C"}{review.text}{"\u201D"}
         </blockquote>
-        <p className="text-gold-400 text-sm font-semibold tracking-wide">
+        <p className="mt-5 text-sm font-semibold tracking-wide text-gold-400">
           {review.author} &mdash; Google Review
         </p>
       </div>
 
-      <div className="mt-8 flex items-center justify-center gap-4">
+      <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
         <button
           type="button"
           onClick={() => goTo((current - 1 + reviews.length) % reviews.length)}
-          className="rounded-full border border-navy-700 px-3 py-2 text-xs font-semibold uppercase tracking-widest text-navy-300 transition-colors hover:border-gold-400 hover:text-white"
+          className="rounded-full border border-navy-700 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-navy-300 transition-colors hover:border-gold-400 hover:text-white"
           aria-label="Show previous review"
         >
           Prev
         </button>
 
         {/* Dot indicators */}
-        <div className="flex justify-center gap-2">
+        <div className="flex max-w-full flex-wrap justify-center gap-2">
         {reviews.map((_, i) => (
           <button
             key={i}
@@ -137,7 +137,7 @@ export default function ReviewCarousel() {
         <button
           type="button"
           onClick={() => setIsPaused((paused) => !paused)}
-          className="rounded-full border border-navy-700 px-3 py-2 text-xs font-semibold uppercase tracking-widest text-navy-300 transition-colors hover:border-gold-400 hover:text-white"
+          className="rounded-full border border-navy-700 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-navy-300 transition-colors hover:border-gold-400 hover:text-white"
           aria-pressed={isPaused}
         >
           {isPaused || prefersReducedMotion ? "Play" : "Pause"}

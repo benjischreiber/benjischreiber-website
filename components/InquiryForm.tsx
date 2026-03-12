@@ -61,7 +61,7 @@ export default function InquiryForm({
             name="firstName"
             required
             autoComplete="given-name"
-            className="w-full border border-navy-200 px-4 py-3 text-sm text-navy-800 transition-colors focus:border-gold-400 focus:outline-none"
+            className="w-full rounded-sm border border-navy-200 bg-white px-4 py-3 text-sm text-navy-800 transition-colors focus:border-gold-400 focus:outline-none focus:ring-2 focus:ring-gold-100"
             placeholder="Jane"
           />
         </div>
@@ -75,7 +75,7 @@ export default function InquiryForm({
             name="lastName"
             required
             autoComplete="family-name"
-            className="w-full border border-navy-200 px-4 py-3 text-sm text-navy-800 transition-colors focus:border-gold-400 focus:outline-none"
+            className="w-full rounded-sm border border-navy-200 bg-white px-4 py-3 text-sm text-navy-800 transition-colors focus:border-gold-400 focus:outline-none focus:ring-2 focus:ring-gold-100"
             placeholder="Smith"
           />
         </div>
@@ -91,7 +91,7 @@ export default function InquiryForm({
           name="email"
           required
           autoComplete="email"
-          className="w-full border border-navy-200 px-4 py-3 text-sm text-navy-800 transition-colors focus:border-gold-400 focus:outline-none"
+          className="w-full rounded-sm border border-navy-200 bg-white px-4 py-3 text-sm text-navy-800 transition-colors focus:border-gold-400 focus:outline-none focus:ring-2 focus:ring-gold-100"
           placeholder="jane@example.com"
         />
       </div>
@@ -105,7 +105,7 @@ export default function InquiryForm({
           id={compact ? "home-phone" : "phone"}
           name="phone"
           autoComplete="tel"
-          className="w-full border border-navy-200 px-4 py-3 text-sm text-navy-800 transition-colors focus:border-gold-400 focus:outline-none"
+          className="w-full rounded-sm border border-navy-200 bg-white px-4 py-3 text-sm text-navy-800 transition-colors focus:border-gold-400 focus:outline-none focus:ring-2 focus:ring-gold-100"
           placeholder={compact ? "07700 000000" : "+44 7700 000000"}
         />
       </div>
@@ -119,7 +119,7 @@ export default function InquiryForm({
           name="message"
           required
           rows={compact ? 3 : 5}
-          className="w-full resize-none border border-navy-200 px-4 py-3 text-sm text-navy-800 transition-colors focus:border-gold-400 focus:outline-none"
+          className="w-full resize-none rounded-sm border border-navy-200 bg-white px-4 py-3 text-sm text-navy-800 transition-colors focus:border-gold-400 focus:outline-none focus:ring-2 focus:ring-gold-100"
           placeholder={
             compact
               ? "Please briefly describe your symptoms or reason for appointment."
@@ -130,7 +130,7 @@ export default function InquiryForm({
 
       <input type="hidden" name="source" value={compact ? "homepage" : "contact-page"} />
 
-      <div className={compact ? "space-y-2 text-center text-xs text-navy-400" : "space-y-1 text-xs text-navy-400"}>
+      <div className={compact ? "space-y-2 text-center text-xs leading-relaxed text-navy-400" : "space-y-1 text-xs leading-relaxed text-navy-400"}>
         <p>* Required fields.</p>
         <p>We respond to all enquiries within one working day.</p>
         <p>All enquiries are confidential and handled securely.</p>

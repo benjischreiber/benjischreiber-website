@@ -6,12 +6,12 @@ const GOOGLE_URL = "https://g.page/dr-benji-schreiber-consultant-r";
 export default function Footer() {
   return (
     <footer className="bg-navy-950 text-navy-300">
-      <div className="container-content py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="container-content py-14 sm:py-16">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           {/* Brand */}
           <div>
-            <p className="font-serif text-white text-lg mb-1">Dr. Benji Schreiber</p>
-            <p className="text-gold-500 text-xs tracking-widest uppercase mb-4">
+            <p className="mb-1 font-serif text-lg text-white">Dr. Benji Schreiber</p>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-gold-500">
               Consultant Rheumatologist
             </p>
             <p className="text-sm leading-relaxed text-navy-400">
@@ -55,24 +55,24 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-navy-800 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-navy-500">
-          <p>© {new Date().getFullYear()} Dr. Benji Schreiber. All rights reserved.</p>
-          <div className="flex items-center gap-4">
+        <div className="mt-12 flex flex-col gap-4 border-t border-navy-800 pt-6 text-xs text-navy-500 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-center sm:text-left">© {new Date().getFullYear()} Dr. Benji Schreiber. All rights reserved.</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:justify-end">
             <a href={DOCTIFY_URL} target="_blank" rel="noopener noreferrer"
               className="hover:text-gold-400 transition-colors duration-150">
               Doctify Reviews
             </a>
-            <span>·</span>
+            <span className="hidden sm:inline">·</span>
             <a href={GOOGLE_URL} target="_blank" rel="noopener noreferrer"
               className="hover:text-gold-400 transition-colors duration-150">
               Google Reviews
             </a>
-            <span>·</span>
+            <span className="hidden sm:inline">·</span>
             <Link href="/privacy" className="hover:text-gold-400 transition-colors duration-150">
               Privacy Notice
             </Link>
-            <span>·</span>
-            <p>Registered with the General Medical Council</p>
+            <span className="hidden sm:inline">·</span>
+            <p className="text-center sm:text-left">Registered with the General Medical Council</p>
           </div>
         </div>
       </div>
