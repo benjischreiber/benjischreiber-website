@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import ReviewCarousel from "@/components/ReviewCarousel";
 import InquiryForm from "@/components/InquiryForm";
 
-const REVIEW_SUMMARY = "100+ Google reviews";
+const REVIEW_SUMMARY = "Highly rated on Google and Doctify";
 
 export const metadata: Metadata = {
   title: "Private Rheumatologist London | Dr. Benji Schreiber",

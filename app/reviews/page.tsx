@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 const DOCTIFY_URL = "https://www.doctify.com/uk/specialist/dr-benji-schreiber";
 const GOOGLE_READ_URL = "https://g.page/dr-benji-schreiber-consultant-r";
-const REVIEW_SUMMARY = "100+ reviews";
+const REVIEW_SUMMARY = "Google and Doctify";
 
 export const metadata: Metadata = {
   title: "Patient Reviews",
@@ -76,8 +76,8 @@ export default function ReviewsPage() {
           <h1 className="text-4xl md:text-5xl font-serif">Patient Reviews</h1>
           <div className="w-12 h-0.5 bg-gold-500 mt-5 mb-5" />
           <p className="text-navy-300 max-w-2xl leading-relaxed">
-            Dr. Schreiber is rated 5.0 on Google across over 100 reviews. Below is a
-            selection — read the full collection on Google or Doctify.
+            Patient feedback is available on Google and Doctify. Below is a
+            selection — you can also read the full collection on both platforms.
           </p>
         </div>
       </section>

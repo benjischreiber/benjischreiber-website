@@ -4,9 +4,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.benjischreiber.com"),
   title: {
     default: "Dr. Benji Schreiber | Private Consultant Rheumatologist, London",
     template: "%s | Dr. Benji Schreiber",
+  },
+  alternates: {
+    canonical: "/",
   },
   description:
     "Dr. Benji Schreiber MBBS MA MD FRCP — Private Consultant Rheumatologist in North London. Specialist in inflammatory arthritis, connective tissue diseases, lupus, scleroderma, and general rheumatology.",
@@ -24,6 +28,25 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     siteName: "Dr. Benji Schreiber",
+    url: "/",
+    title: "Dr. Benji Schreiber | Private Consultant Rheumatologist, London",
+    description:
+      "Private consultant rheumatology care in North London, with expertise in inflammatory arthritis, connective tissue disease, osteoporosis and general rheumatology.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Dr. Benji Schreiber private rheumatology practice",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dr. Benji Schreiber | Private Consultant Rheumatologist, London",
+    description:
+      "Private consultant rheumatology care in North London, with expertise in inflammatory arthritis, connective tissue disease, osteoporosis and general rheumatology.",
+    images: ["/opengraph-image"],
   },
 };
 

@@ -49,7 +49,12 @@ export default function InquiryForm({
   }
 
   return (
-    <form className={compact ? "space-y-4" : "space-y-5"} onSubmit={handleSubmit}>
+    <form
+      className={compact ? "space-y-4" : "space-y-5"}
+      action={FORM_ENDPOINT}
+      method="POST"
+      onSubmit={handleSubmit}
+    >
       <div className={compact ? "grid grid-cols-1 gap-4 sm:grid-cols-2" : "grid gap-5 sm:grid-cols-2"}>
         <div>
           <label htmlFor={compact ? "home-firstName" : "firstName"} className="mb-2 block text-xs font-semibold uppercase tracking-widest text-navy-600">
