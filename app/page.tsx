@@ -90,10 +90,8 @@ const specialties = [
 const credentials = [
   { value: "MBBS MA MD FRCP", label: "Qualifications" },
   { value: "2010", label: "Consultant Since" },
-  { value: "UCL", label: "Hon. Associate Professor" },
   { value: "4742768", label: "GMC Number" },
-  { value: "315+", label: "Medicolegal Reports" },
-  { value: "H-index 21", label: "Research Impact" },
+  { value: "UCL", label: "Honorary Associate Professor" },
 ];
 
 export default function HomePage() {
@@ -143,7 +141,7 @@ export default function HomePage() {
       {/* Credentials strip */}
       <section className="bg-gold-500">
         <div className="container-content py-6">
-          <div className="grid grid-cols-2 gap-3 text-center text-white sm:gap-4 md:grid-cols-3 lg:grid-cols-6 lg:gap-6">
+          <div className="grid grid-cols-2 gap-3 text-center text-white sm:gap-4 lg:grid-cols-4 lg:gap-6">
             {credentials.map((c) => (
               <div key={c.label} className="px-2 py-2">
                 <p className="font-serif text-base font-semibold sm:text-lg">{c.value}</p>
