@@ -1,42 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-
-const DOCTIFY_URL = "https://www.doctify.com/uk/specialist/dr-benji-schreiber";
-const GOOGLE_READ_URL = "https://g.page/dr-benji-schreiber-consultant-r";
-const REVIEW_SUMMARY = "Google and Doctify";
+import { reviewPlatforms, selectedReviews } from "@/data/reviews";
 
 export const metadata: Metadata = {
   title: "Patient Reviews",
   description:
     "Read patient reviews and testimonials for Dr. Benji Schreiber, private consultant rheumatologist in North London.",
 };
-
-const reviews = [
-  {
-    text: "Dr Schreiber is a star. He has helped me immeasurably, taking the time to explain everything to me from the outset in a friendly and professional manner. I'm on a journey and have always felt that he has been on the journey with me.",
-    author: "Darren P.",
-  },
-  {
-    text: "He is attentive, asks questions, and carefully listens to replies in order to understand and correctly diagnose the cause of discomfort. He is committed to improving patients' health. His expertise and compassion made me feel reassured and confident that I am in good hands.",
-    author: "Sylvia",
-  },
-  {
-    text: "After almost one year of treatment Dr Schreiber has transformed my life. His calm, sympathetic approach to my health issues transcend all boundaries.",
-    author: "David L.",
-  },
-  {
-    text: "Dr Schreiber is an exceptionally thoughtful and caring doctor who inspires trust and confidence. He is a good communicator which to me, matters just as much as his clinical expertise.",
-    author: "Sarah B.",
-  },
-  {
-    text: "I had an excellent experience with Dr Schreiber. He was very understanding and took the time to really listen to my concerns. What stood out most was how clearly he explained things — breaking down complex medical terms into plain English.",
-    author: "Jessica H.",
-  },
-  {
-    text: "Dr. Schreiber is a rare find in the rheumatology field. He was the first doctor to take a thorough, holistic approach — and it made all the difference.",
-    author: "Samujjal P.",
-  },
-];
 
 function StarRating() {
   return (
@@ -88,7 +58,7 @@ export default function ReviewsPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             {/* Google badge */}
             <a
-              href={GOOGLE_READ_URL}
+              href={reviewPlatforms.google.url}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-4 px-6 py-4 border border-navy-200 hover:border-gold-400 hover:shadow-sm transition-all duration-200 bg-white"
@@ -96,23 +66,13 @@ export default function ReviewsPage() {
               <GoogleLogo />
               <div className="text-left">
                 <p className="text-xs text-navy-400 uppercase tracking-widest font-semibold">Google Reviews</p>
-                <div className="flex items-center gap-1.5 mt-0.5">
-                  <span className="font-serif text-navy-900 text-lg font-semibold">5.0</span>
-                  <div className="flex gap-0.5">
-                    {[1,2,3,4,5].map(s => (
-                      <svg key={s} className="w-3.5 h-3.5 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <span className="text-navy-400 text-xs">{REVIEW_SUMMARY}</span>
-                </div>
+                <p className="mt-0.5 text-sm text-navy-600">{reviewPlatforms.google.summary}</p>
               </div>
             </a>
 
             {/* Doctify badge */}
             <a
-              href={DOCTIFY_URL}
+              href={reviewPlatforms.doctify.url}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-4 px-6 py-4 border border-navy-200 hover:border-gold-400 hover:shadow-sm transition-all duration-200 bg-white"
@@ -122,16 +82,7 @@ export default function ReviewsPage() {
               </svg>
               <div className="text-left">
                 <p className="text-xs text-navy-400 uppercase tracking-widest font-semibold">Doctify</p>
-                <div className="flex items-center gap-1.5 mt-0.5">
-                  <div className="flex gap-0.5">
-                    {[1,2,3,4,5].map(s => (
-                      <svg key={s} className="w-3.5 h-3.5 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <span className="text-navy-400 text-xs">Verified reviews</span>
-                </div>
+                <p className="mt-0.5 text-sm text-navy-600">{reviewPlatforms.doctify.summary}</p>
               </div>
             </a>
           </div>
@@ -147,7 +98,7 @@ export default function ReviewsPage() {
             <div className="divider-gold mx-auto" />
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {reviews.map((review, i) => (
+            {selectedReviews.slice(0, 6).map((review, i) => (
               <div
                 key={i}
                 className="flex flex-col bg-navy-50 border border-navy-100 p-7 hover:border-gold-300 hover:shadow-sm transition-all duration-200"
@@ -161,14 +112,14 @@ export default function ReviewsPage() {
                 </blockquote>
                 <div className="mt-6 pt-4 border-t border-navy-200">
                   <p className="text-navy-800 text-sm font-medium">{review.author}</p>
-                  <p className="text-navy-400 text-xs mt-0.5">Google Review</p>
+                  <p className="text-navy-400 text-xs mt-0.5">{review.source}</p>
                 </div>
               </div>
             ))}
           </div>
           <div className="text-center mt-10">
             <a
-              href={GOOGLE_READ_URL}
+              href={reviewPlatforms.google.url}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline"
