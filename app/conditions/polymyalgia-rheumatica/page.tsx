@@ -120,7 +120,7 @@ export default function PolymyalgiaRheumaticaPage() {
             <div className="space-y-4 text-navy-600 leading-relaxed">
               <p>
                 Corticosteroids are the mainstay of treatment for PMR and usually produce a dramatic and
-                rapid response. Prednisolone is typically started at 15–25mg daily and gradually tapered
+                rapid response. Prednisolone is usually started at a moderate dose and gradually tapered
                 over 12–24 months according to symptoms and inflammatory markers. The dramatic improvement
                 in symptoms within 24–72 hours is both therapeutically important and diagnostically useful
                 — a slow or poor response to corticosteroids should prompt reassessment of the diagnosis.

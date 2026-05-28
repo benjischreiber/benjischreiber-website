@@ -18,8 +18,7 @@ Dr. Schreiber is the data controller for personal information collected through 
 
 • Your name, email address and telephone number
 • The reason for your enquiry or symptoms you have described
-• Your health insurance provider (if applicable)
-• Whether you have a GP referral
+• Any additional information you choose to include in your message
 
 We do not collect payment card details through this website. We do not use cookies for tracking or advertising purposes.`,
   },
@@ -45,7 +44,7 @@ Where you provide information about your health, we process this as special cate
   },
   {
     title: "How your information is stored",
-    content: `Enquiries submitted through the contact form on this website are processed by Formspree (formspree.io), a secure form processing service. Formspree is GDPR-compliant and data is stored on servers within the European Economic Area.
+    content: `Enquiries submitted through the contact form on this website are processed by Formspree (formspree.io), a secure form processing service. Form submissions are then handled by Dr. Schreiber's practice for the purpose of responding to your enquiry.
 
 Clinical records are stored securely in accordance with the GMC's guidance on confidentiality and the NHS Records Management Code of Practice. Adult patient records are retained for a minimum of eight years from the date of last contact.`,
   },

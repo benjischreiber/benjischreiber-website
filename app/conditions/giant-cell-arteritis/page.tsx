@@ -121,10 +121,10 @@ export default function GiantCellArteritisPage() {
               <p>
                 High-dose corticosteroids must be started immediately in any patient with suspected GCA —
                 before investigation results are available — to prevent visual loss. Where visual symptoms
-                are present or vision has already been affected, intravenous methylprednisolone is given
-                urgently. For uncomplicated GCA without visual involvement, oral prednisolone at 40–60mg
-                daily is the standard starting dose. Treatment must not be delayed pending biopsy or
-                imaging — investigations are undertaken in parallel.
+                are present or vision has already been affected, intravenous corticosteroid treatment may be
+                required urgently. In other cases, high-dose oral prednisolone is usually started under
+                medical supervision. Treatment must not be delayed pending biopsy or imaging —
+                investigations are undertaken in parallel.
               </p>
               <p>
                 As with PMR, corticosteroids are then gradually tapered over an 18–24 month period

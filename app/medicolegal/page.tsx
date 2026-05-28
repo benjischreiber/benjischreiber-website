@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Medicolegal Expert Witness",
   description:
-    "Dr. Benji Schreiber — expert witness rheumatologist with 315+ medicolegal reports, Cardiff University Bond Solon certified, CPR Part 35 compliant. Personal injury, clinical negligence, London.",
+    "Dr. Benji Schreiber — expert witness rheumatologist with extensive medicolegal experience, Cardiff University Bond Solon certified, CPR Part 35 compliant. Personal injury, clinical negligence, London.",
 };
 
 const areas = [
@@ -31,7 +31,7 @@ const areas = [
   {
     title: "Pulmonary Hypertension",
     description:
-      "Dr. Schreiber's research doctorate focused on pulmonary hypertension in connective tissue disease, making him uniquely qualified to provide expert opinion in this complex area.",
+      "Dr. Schreiber's research doctorate focused on pulmonary hypertension in connective tissue disease, giving him a strong academic and clinical background for expert opinion in this complex area.",
   },
   {
     title: "Osteoporosis & Fractures",
@@ -41,7 +41,7 @@ const areas = [
 ];
 
 const stats = [
-  { value: "315+", label: "Reports Completed" },
+  { value: "Extensive", label: "Report Experience" },
   { value: "Both Parties", label: "Claimants & Defendants" },
   { value: "CPR Part 35", label: "Compliant" },
   { value: "4–6 weeks", label: "Typical Turnaround" },
@@ -95,7 +95,7 @@ export default function MedicolegalPage() {
           <p className="text-navy-300 max-w-2xl leading-relaxed">
             Dr. Schreiber acts as an expert witness for both claimants and defendants in personal
             injury and clinical negligence litigation, producing CPR-compliant reports of the
-            highest standard.
+            standard expected for formal legal proceedings.
           </p>
         </div>
       </section>
@@ -123,11 +123,10 @@ export default function MedicolegalPage() {
             <div className="divider-gold" />
             <div className="space-y-5 text-navy-600 leading-relaxed">
               <p>
-                Dr. Benji Schreiber has completed over 315 medicolegal reports and has considerable
-                experience providing expert witness opinions in rheumatology, connective tissue
-                diseases, chronic pain and pulmonary hypertension. He is instructed by solicitors
-                representing both claimants and defendants, and approaches all instructions with
-                the same independence and rigour.
+                Dr. Benji Schreiber has considerable experience providing expert witness opinions in
+                rheumatology, connective tissue diseases, chronic pain and pulmonary hypertension.
+                He is instructed by solicitors representing both claimants and defendants, and
+                approaches all instructions with the same independence and rigour.
               </p>
               <p>
                 He holds the Cardiff University Law School Bond Solon Expert Witness Certificate
