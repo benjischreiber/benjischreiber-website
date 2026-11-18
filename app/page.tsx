@@ -102,7 +102,7 @@ export default function HomePage() {
           {/* Text */}
           <div className="max-w-2xl flex-1 text-center md:text-left">
             <p className="section-label !text-gold-400">Private Consultant Rheumatologist · North London</p>
-            <h1 className="mb-4 text-3xl font-serif leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
+            <h1 className="mb-4 text-3xl font-serif leading-tight sm:text-4xl md:text-5xl lg:text-[3.125rem] lg:tracking-tight lg:whitespace-nowrap">
               Professor Benji Schreiber
             </h1>
             <p className="mb-5 text-sm tracking-wide text-gold-300 sm:text-[15px]">
