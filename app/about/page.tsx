@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Dr. Benji Schreiber MBBS MA MD FRCP — Honorary Associate Professor at UCL, NHS Consultant at the Royal Free Hospital, and leading private Consultant Rheumatologist in London.",
+    "Learn about Professor Benji Schreiber MBBS MA MD FRCP — Honorary Professor at UCL, NHS Consultant at the Royal Free Hospital, and leading private Consultant Rheumatologist in London.",
 };
 
 const qualifications = [
@@ -27,7 +27,7 @@ const roles = [
     detail: "Hampstead, London",
   },
   {
-    title: "Honorary Associate Professor",
+    title: "Honorary Professor",
     org: "University College London",
     detail: "Division of Medicine",
   },
@@ -52,7 +52,7 @@ export default function AboutPage() {
       <section className="bg-navy-950 text-white py-20">
         <div className="container-content">
           <p className="section-label !text-gold-400">Meet the Specialist</p>
-          <h1 className="text-4xl md:text-5xl font-serif">About Dr. Benji Schreiber</h1>
+          <h1 className="text-4xl md:text-5xl font-serif">About Professor Benji Schreiber</h1>
           <div className="w-12 h-0.5 bg-gold-500 mt-5" />
         </div>
       </section>
@@ -66,7 +66,7 @@ export default function AboutPage() {
               <div className="relative w-full aspect-[3/4] rounded-sm overflow-hidden shadow-lg">
                 <Image
                   src="/images/benji.jpg"
-                  alt="Dr. Benji Schreiber — Consultant Rheumatologist"
+                  alt="Professor Benji Schreiber — Consultant Rheumatologist"
                   fill
                   className="object-cover object-top"
                   priority
@@ -92,7 +92,7 @@ export default function AboutPage() {
 
               <div className="space-y-5 text-navy-600 leading-relaxed">
                 <p>
-                  Dr. Benji Schreiber is one of London&apos;s leading consultant rheumatologists,
+                  Professor Benji Schreiber is one of London&apos;s leading consultant rheumatologists,
                   with a clinical practice spanning general rheumatology, inflammatory arthritis,
                   connective tissue diseases, and pulmonary hypertension. He was appointed as an
                   NHS Consultant Rheumatologist in 2010 and has since built an exceptional
@@ -105,14 +105,14 @@ export default function AboutPage() {
                   Hospital.
                 </p>
                 <p>
-                  Dr. Schreiber holds a Masters degree in Clinical Education and a research
+                  Professor Schreiber holds a Masters degree in Clinical Education and a research
                   doctorate, the latter focused on pulmonary hypertension and connective tissue
                   diseases — areas where he has published and presented internationally. He is an
-                  Honorary Associate Professor at University College London, reflecting his
+                  Honorary Professor at University College London, reflecting his
                   commitment to research and postgraduate education.
                 </p>
                 <p>
-                  In his private practice, Dr. Schreiber sees patients with the full range of
+                  In his private practice, Professor Schreiber sees patients with the full range of
                   rheumatological conditions at two North London locations. He also undertakes
                   medicolegal expert witness work for both claimants and defendants in personal
                   injury and clinical negligence cases.
@@ -180,7 +180,7 @@ export default function AboutPage() {
             <div className="divider-gold" />
             <div className="space-y-4 text-navy-600 leading-relaxed mt-2">
               <p>
-                Dr. Schreiber has an active research profile with over 40 peer-reviewed publications
+                Professor Schreiber has an active research profile with over 40 peer-reviewed publications
                 and more than 100 academic outputs. His work has been published in leading
                 international journals including <em>The Lancet</em>, <em>Circulation Research</em>,
                 the <em>European Heart Journal</em>, <em>Arthritis &amp; Rheumatology</em>, and the

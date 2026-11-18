@@ -31,7 +31,7 @@ export default function Navbar() {
         {/* Logo / Name */}
         <Link href="/" className="flex flex-col leading-tight lg:mr-4">
           <span className="whitespace-nowrap font-serif text-sm font-semibold tracking-[0.01em] text-navy-900 sm:text-base">
-            Dr. Benji Schreiber
+            Professor Benji Schreiber
           </span>
           <span className="whitespace-nowrap text-[9px] font-semibold uppercase tracking-[0.16em] text-gold-500 sm:text-[10px]">
             Consultant Rheumatologist

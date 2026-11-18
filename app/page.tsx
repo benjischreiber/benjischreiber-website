@@ -5,9 +5,9 @@ import ReviewCarousel from "@/components/ReviewCarousel";
 import InquiryForm from "@/components/InquiryForm";
 
 export const metadata: Metadata = {
-  title: "Private Rheumatologist London | Dr. Benji Schreiber",
+  title: "Private Rheumatologist London | Professor Benji Schreiber",
   description:
-    "Dr. Benji Schreiber MBBS MA MD FRCP — private consultant rheumatologist in North London, consulting at St John's Wood and Golders Green. Specialist in arthritis, lupus, connective tissue diseases and osteoporosis.",
+    "Professor Benji Schreiber MBBS MA MD FRCP — private consultant rheumatologist in North London, consulting at St John's Wood and Golders Green. Specialist in arthritis, lupus, connective tissue diseases and osteoporosis.",
 };
 
 const specialties = [
@@ -89,7 +89,7 @@ const credentials = [
   { value: "MBBS MA MD FRCP", label: "Qualifications" },
   { value: "2010", label: "Consultant Since" },
   { value: "4742768", label: "GMC Number" },
-  { value: "UCL", label: "Honorary Associate Professor" },
+  { value: "UCL", label: "Honorary Professor" },
 ];
 
 export default function HomePage() {
@@ -103,7 +103,7 @@ export default function HomePage() {
           <div className="max-w-2xl flex-1 text-center md:text-left">
             <p className="section-label !text-gold-400">Private Consultant Rheumatologist · North London</p>
             <h1 className="mb-4 text-3xl font-serif leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
-              Dr. Benji Schreiber
+              Professor Benji Schreiber
             </h1>
             <p className="mb-5 text-sm tracking-wide text-gold-300 sm:text-[15px]">
               Consultant-delivered care from first appointment to follow-up — no registrars, no delegation.
@@ -127,7 +127,7 @@ export default function HomePage() {
           <div className="relative h-72 w-56 flex-shrink-0 sm:h-80 sm:w-64 md:h-96 md:w-72">
             <Image
               src="/images/benji.png"
-              alt="Dr. Benji Schreiber — Consultant Rheumatologist"
+              alt="Professor Benji Schreiber — Consultant Rheumatologist"
               fill
               className="object-contain object-bottom"
               priority
@@ -175,13 +175,13 @@ export default function HomePage() {
       <section className="section-padding bg-white">
         <div className="container-content">
           <div className="max-w-3xl">
-            <p className="section-label">About Dr. Schreiber</p>
+            <p className="section-label">About Professor Schreiber</p>
             <h2 className="section-title">
               Expertise you can trust, care you can feel
             </h2>
             <div className="divider-gold" />
             <p className="text-navy-600 leading-relaxed mb-5">
-              Dr. Benji Schreiber trained at University College London and undertook his specialist
+              Professor Benji Schreiber trained at University College London and undertook his specialist
               training at some of London&apos;s leading hospitals, including Hammersmith, Chelsea and
               Westminster, and the Royal Free. He was appointed as an NHS Consultant Rheumatologist
               in 2010.
@@ -220,7 +220,7 @@ export default function HomePage() {
                 genuinely listened to.
               </p>
             </div>
-            <p className="mt-6 text-navy-800 font-serif text-base italic">— Dr. Benji Schreiber</p>
+            <p className="mt-6 text-navy-800 font-serif text-base italic">— Professor Benji Schreiber</p>
           </div>
         </div>
       </section>
@@ -229,7 +229,7 @@ export default function HomePage() {
       <section className="bg-gold-500 py-10">
         <div className="container-content flex flex-col items-center justify-between gap-6 sm:flex-row">
           <p className="text-center font-serif text-lg text-white sm:text-left">
-            Ready to book a consultation with Dr. Schreiber?
+            Ready to book a consultation with Professor Schreiber?
           </p>
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-shrink-0">
             <Link href="/contact" className="btn-outline w-full !border-white !bg-white !px-6 !py-3 !text-gold-600 hover:!bg-navy-50 sm:w-auto">
@@ -287,7 +287,7 @@ export default function HomePage() {
             <h2 className="section-title">Two convenient North London locations</h2>
             <div className="divider-gold mx-auto" />
             <p className="text-navy-600 leading-relaxed mt-4 max-w-2xl mx-auto">
-              Dr. Schreiber sees private patients at two well-equipped facilities in North London,
+              Professor Schreiber sees private patients at two well-equipped facilities in North London,
               both offering on-site diagnostics and easy access by tube, bus or car.
             </p>
           </div>
@@ -357,7 +357,7 @@ export default function HomePage() {
               <h2 className="section-title !text-white mb-4">Request an Appointment</h2>
               <div className="mx-auto mb-6 h-0.5 w-12 bg-gold-500 md:mx-0" />
               <p className="mb-4 text-navy-300 leading-8">
-                To book a consultation with Dr. Schreiber, please fill in your details and we
+                To book a consultation with Professor Schreiber, please fill in your details and we
                 will respond within one working day.
               </p>
               <div className="space-y-3 text-sm text-navy-400">

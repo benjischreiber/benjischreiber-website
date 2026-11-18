@@ -45,7 +45,7 @@ export default function OpenGraphImage() {
               Private Consultant Rheumatologist
             </div>
             <div style={{ display: "flex", fontSize: 68, lineHeight: 1.05, maxWidth: 760 }}>
-              Dr. Benji Schreiber
+              Professor Benji Schreiber
             </div>
             <div
               style={{

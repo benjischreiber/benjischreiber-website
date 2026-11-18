@@ -6,19 +6,19 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.benjischreiber.com"),
   title: {
-    default: "Dr. Benji Schreiber | Private Consultant Rheumatologist, London",
-    template: "%s | Dr. Benji Schreiber",
+    default: "Professor Benji Schreiber | Private Consultant Rheumatologist, London",
+    template: "%s | Professor Benji Schreiber",
   },
   alternates: {
     canonical: "/",
   },
   description:
-    "Dr. Benji Schreiber MBBS MA MD FRCP — Private Consultant Rheumatologist in North London. Specialist in inflammatory arthritis, connective tissue diseases, lupus, scleroderma, and general rheumatology.",
+    "Professor Benji Schreiber MBBS MA MD FRCP — Private Consultant Rheumatologist in North London. Specialist in inflammatory arthritis, connective tissue diseases, lupus, scleroderma, and general rheumatology.",
   keywords: [
     "rheumatologist London",
     "private rheumatologist",
     "consultant rheumatologist",
-    "Dr Benji Schreiber",
+    "Professor Benji Schreiber",
     "rheumatology Golders Green",
     "arthritis specialist London",
     "lupus specialist",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_GB",
-    siteName: "Dr. Benji Schreiber",
+    siteName: "Professor Benji Schreiber",
     url: "/",
-    title: "Dr. Benji Schreiber | Private Consultant Rheumatologist, London",
+    title: "Professor Benji Schreiber | Private Consultant Rheumatologist, London",
     description:
       "Private consultant rheumatology care in North London, with expertise in inflammatory arthritis, connective tissue disease, osteoporosis and general rheumatology.",
     images: [
@@ -37,13 +37,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Dr. Benji Schreiber private rheumatology practice",
+        alt: "Professor Benji Schreiber private rheumatology practice",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dr. Benji Schreiber | Private Consultant Rheumatologist, London",
+    title: "Professor Benji Schreiber | Private Consultant Rheumatologist, London",
     description:
       "Private consultant rheumatology care in North London, with expertise in inflammatory arthritis, connective tissue disease, osteoporosis and general rheumatology.",
     images: ["/opengraph-image"],
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 const schemaMarkup = {
   "@context": "https://schema.org",
   "@type": ["Physician", "MedicalBusiness"],
-  "name": "Dr. Benji Schreiber",
+  "name": "Professor Benji Schreiber",
   "description": "Private Consultant Rheumatologist in North London. Specialist in inflammatory arthritis, connective tissue diseases, lupus, scleroderma, pulmonary hypertension and general rheumatology.",
   "url": "https://www.benjischreiber.com",
   "telephone": "+442084586775",

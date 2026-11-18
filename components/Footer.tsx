@@ -10,13 +10,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           {/* Brand */}
           <div>
-            <p className="mb-1 font-serif text-lg text-white">Dr. Benji Schreiber</p>
+            <p className="mb-1 font-serif text-lg text-white">Professor Benji Schreiber</p>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-gold-500">
               Consultant Rheumatologist
             </p>
             <p className="text-sm leading-relaxed text-navy-400">
               MBBS&nbsp;MA&nbsp;MD&nbsp;FRCP<br />
-              Honorary Associate Professor, UCL<br />
+              Honorary Professor, UCL<br />
               NHS Consultant, Royal Free Hospital
             </p>
           </div>
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-4 border-t border-navy-800 pt-6 text-xs text-navy-500 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-center sm:text-left">© {new Date().getFullYear()} Dr. Benji Schreiber. All rights reserved.</p>
+          <p className="text-center sm:text-left">© {new Date().getFullYear()} Professor Benji Schreiber. All rights reserved.</p>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:justify-end">
             <a href={DOCTIFY_URL} target="_blank" rel="noopener noreferrer"
               className="hover:text-gold-400 transition-colors duration-150">
